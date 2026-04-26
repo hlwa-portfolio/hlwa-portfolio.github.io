@@ -172,6 +172,110 @@
       color: #0000ee;
     }
 
+    /* two-column description layout */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .sub-section-heading {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #b8480a;
+      text-transform: uppercase;
+      margin: 16px 0 6px;
+    }
+
+    .sub-section-heading:first-child {
+      margin-top: 0;
+    }
+
+    .bullet-list {
+      margin: 0 0 12px 0;
+      padding-left: 18px;
+    }
+
+    .bullet-list li {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    .img-placeholder {
+      border: 2px dashed #aaa;
+      background: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      color: #888;
+      font-size: 0.8rem;
+      text-align: center;
+      padding: 16px;
+      margin: 10px 0;
+    }
+
+    .img-placeholder .ph-icon {
+      font-size: 1.6rem;
+    }
+
+    /* step rows for features section */
+    .step-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 28px;
+      align-items: flex-start;
+    }
+
+    .step-label-box {
+      min-width: 110px;
+      max-width: 110px;
+      border: 2px solid #222;
+      padding: 10px 8px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 0.8rem;
+      line-height: 1.3;
+      flex-shrink: 0;
+    }
+
+    .step-label-box .step-num {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+
+    .step-arrow {
+      font-size: 1.2rem;
+      padding-top: 18px;
+      color: #555;
+      flex-shrink: 0;
+    }
+
+    .step-body {
+      flex: 1;
+    }
+
+    .step-body h3 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .step-body p {
+      font-size: 0.9rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
     footer {
       text-align: center;
       padding: 16px 0;
@@ -197,76 +301,186 @@
 
     <!-- project description -->
     <section id="description">
-      <div class="section-label">01 — Project Description</div>
-      <h2>What Is It &amp; Why Does It Matter?</h2>
-
-      <p>
-        <strong>The High Level Waste Glass Application Project</strong> is a software tool developed in collaboration with the Waste Treatment Completion Company and Oregon State University to support the vitrification of nuclear waste at the Hanford Site in Washington State. At its core, the project transforms a highly technical waste-glass formulation algorithm, made up of hundreds of chemical equations, into a usable application that guides Hanford Site operators through the calculation process.
+      <div class="section-label">01 — What It Is &amp; Why It Matters</div>
+      <h2>Nuclear Waste Vitrification</h2>
+      <p style="margin-bottom: 4px; color: #555; font-size: 0.95rem;">
+        The process of converting radioactive waste slurry into glass forms
       </p>
 
-      <p>
-        Hanford has long faced major challenges in nuclear waste storage and cleanup. Decades of nuclear production left the site with large volumes of hazardous radioactive waste, creating one of the most complex environmental cleanup efforts in the United States. Some of that waste poses a long-term risk to the surrounding environment, including the Columbia River. The broader goal is to stabilize this waste through vitrification, turning it into glass so it can be stored and disposed of more safely.
-      </p>
+      <div class="two-col">
+        <!-- left column -->
+        <div>
+          <div class="img-placeholder" style="min-height:160px;">
+            <span class="ph-icon">🖼</span>
+            <strong>Simplified Vitrification Process Diagram</strong>
+            <span>Attach image here</span>
+          </div>
 
-      <p>
-        This application is designed to directly support that mission. It implements the vitrification calculation workflow used to evaluate waste composition, calculate glass and oxide values, validate process constraints, automate reports, and support engineering decisions throughout the formulation process. Our tool is not only dramatically faster, but also more repeatable, scalable, and practical for the engineers carrying out this work at the site.
-      </p>
+          <div class="sub-section-heading">Background</div>
+          <ul class="bullet-list">
+            <li>Hanford was the site of Plutonium enrichment for the Manhattan Project. They produced the Plutonium used in the Fat Man bomb dropped on Nagasaki. Today, the site has thousands of tanks of radioactive waste slurry.</li>
+            <li>Many of the tanks are old, leaking, or about to leak.</li>
+            <li>In order to protect the Columbia River, Hanford is using vitrification to contain nuclear waste as glass to prevent further contamination.</li>
+          </ul>
+
+          <div class="img-placeholder" style="min-height:140px;">
+            <span class="ph-icon">🖼</span>
+            <strong>HLW Application Home Interface</strong>
+            <span>Attach screenshot here</span>
+          </div>
+        </div>
+
+        <!-- right column -->
+        <div>
+          <div class="sub-section-heading">What Is Vitrification?</div>
+          <ul class="bullet-list">
+            <li>The process of adding glass forming chemicals (GFCs) to the radioactive waste slurry and heating the mixture so they incorporate into a viscous fluid.</li>
+            <li>The resulting product is moved to canisters and cools into a stable glass-like structure.</li>
+            <li>The site began vitrification of low activity waste on October 15th, 2025.</li>
+          </ul>
+
+          <div class="img-placeholder" style="min-height:160px;">
+            <span class="ph-icon">🖼</span>
+            <strong>Hanford Site, WA. Circa 1960</strong>
+            <span>Attach image here</span>
+          </div>
+
+          <div class="sub-section-heading">What We Solve</div>
+          <ul class="bullet-list">
+            <li>We created an application that simplifies the 300+ equations required for the process into a calculator &amp; optimizer application that only takes minutes for each step.</li>
+            <li>Previous implementations of the Algorithm would take weeks for operators to apply.</li>
+            <li>Now operators can easily execute the algorithm for each step of the vitrification process and achieve optimal glass compositions.</li>
+            <li>In addition to operations, our app also automatically creates and saves reports for each batch.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- highlights -->
     <section id="features">
-      <div class="section-label">02 — Key Features &amp; Highlights</div>
-      <h2>What Can It Do?</h2>
+      <div class="section-label">02 — Calculator Features</div>
+      <h2>High Level Waste Glass Vitrification Algorithm Explained</h2>
       <p>
-        The calculator handles the core algorithmic steps in the Immobilized High-Level Waste product compliance workflow, turning lab sample data into the engineering values needed for vitrification. Unifying these steps creates a seamless production tool for the vitrification operators at the Hanford site.
+        The calculator handles the core algorithmic steps in the Immobilized High-Level Waste product compliance workflow, turning lab sample data into the engineering values needed for vitrification. Unifying these steps creates a seamless production tool for the vitrification operators at the Waste Treatment Completion Company at the Hanford site.
       </p>
 
-      <div class="card-grid">
-        <div class="card">
-          <div class="icon">✦</div>
-          <h3>Step 1: Waste Transfer</h3>
-          <p>Waste samples are used to calculate the required High-Level Waste (HLW) transfer into Melter Feed Preparation Vessels (MFPV), establishing the starting point for the batch.</p>
+      <div class="step-row">
+        <div class="step-label-box">
+          <span class="step-num">Step 1</span>
+          Waste Volume Transfer
         </div>
-
-        <div class="card">
-          <div class="icon">✦</div>
-          <h3>Step 2: GFC Calculation</h3>
-          <p>After the waste is transferred, new samples are analyzed to calculate the required glass-forming chemical (GFC) masses needed to adjust the mixture.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">✦</div>
-          <h3>Step 3: Glass Property Prediction</h3>
-          <p>After the GFCs are added, the final mixture is sampled and analyzed to predict the glass properties, giving engineers a data-driven estimate of whether the glass will meet requirements.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">✦</div>
-          <h3>Step 4: Constraint Validation</h3>
-          <p>The predicted properties and composition are validated against required process and product constraints. If the formulation does not pass, the workflow loops back to Step 2 to adjust the mixture.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">✦</div>
-          <h3>Step 5: Record Generation</h3>
-          <p>Production records are generated and saved, supporting production record generation and process readiness for the vitrification operators.</p>
+        <div class="step-arrow">→</div>
+        <div class="step-body">
+          <h3>Step 1: Waste Volume Transfer</h3>
+          <p>Waste samples are used to calculate the required High-Level (HLW) transfer into Melter Feed Preparation Vessel.</p>
+          <div class="img-placeholder" style="min-height:120px;">
+            <span class="ph-icon">🖼</span>
+            <strong>Step 1 Screenshot</strong>
+            <span>Attach calculator screenshot here</span>
+          </div>
         </div>
       </div>
 
-      <!-- media / demo slot -->
-      <div class="media-placeholder">
-        <span class="media-icon">🖼</span>
-        <strong>Screenshot / Demo / Figure</strong>
-        <span>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-          Visuals, embeds, and/or quick demos live here.
-        </span>
+      <div class="step-row">
+        <div class="step-label-box">
+          <span class="step-num">Step 2</span>
+          GFC/Glass Transfer
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-body">
+          <h3>Step 2: GFC Calculation</h3>
+          <p>After the waste is transferred, new samples are analyzed to calculate the required glass-forming chemical (GFC) masses needed.</p>
+          <div class="img-placeholder" style="min-height:120px;">
+            <span class="ph-icon">🖼</span>
+            <strong>Step 2 Screenshot</strong>
+            <span>Attach calculator screenshot here</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-label-box">
+          <span class="step-num">Step 3</span>
+          Predict Properties
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-body">
+          <h3>Step 3: Glass Property Prediction</h3>
+          <p>After the GFCs are added, the final mixture is sampled and analyzed to predict the glass properties.</p>
+          <div class="img-placeholder" style="min-height:120px;">
+            <span class="ph-icon">🖼</span>
+            <strong>Step 3 Screenshot</strong>
+            <span>Attach calculator screenshot here</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-label-box">
+          <span class="step-num">Step 4</span>
+          Validate Properties
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-body">
+          <h3>Step 4: Constraint Validation</h3>
+          <p>The predicted glass properties are validated against the requirements. If the formulation does not meet constraints, the workflow loops back to Step 2 to fix the mixture.</p>
+          <div class="img-placeholder" style="min-height:120px;">
+            <span class="ph-icon">🖼</span>
+            <strong>Step 4 Screenshot</strong>
+            <span>Attach calculator screenshot here</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-label-box">
+          <span class="step-num">Step 5</span>
+          Generate Report
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-body">
+          <h3>Step 5: Record Generation</h3>
+          <p>The production records are generated and saved.</p>
+          <div class="img-placeholder" style="min-height:120px;">
+            <span class="ph-icon">🖼</span>
+            <strong>Step 5 Screenshot</strong>
+            <span>Attach calculator screenshot here</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- misc -->
+    <section id="misc">
+      <div class="section-label">03 — Misc</div>
+      <h2>Additional Information</h2>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>Technologies Used</h3>
+          <p>Details about the tech stack, frameworks, and tools used to build the application.</p>
+        </div>
+
+        <div class="card">
+          <h3>Development Timeline</h3>
+          <p>Key milestones and phases of the project from initial design through delivery.</p>
+        </div>
+
+        <div class="card">
+          <h3>Challenges &amp; Lessons Learned</h3>
+          <p>Notable obstacles encountered during development and what was learned from them.</p>
+        </div>
+
+        <div class="card">
+          <h3>Future Work</h3>
+          <p>Potential improvements, extensions, or next steps for the application.</p>
+        </div>
       </div>
     </section>
 
     <!-- team -->
     <section id="team">
-      <div class="section-label">03 — Team Credits</div>
+      <div class="section-label">04 — Team Credits</div>
       <h2>Meet the Team</h2>
 
       <div class="team-grid">
@@ -277,7 +491,6 @@
           <h3>Deptmer Martin Ashley Jr.</h3>
           <p class="role">B.S. Computer Science &ndash; Systems</p>
           <p class="member-detail"><a href="mailto:d.m.ashley02@gmail.com">d.m.ashley02@gmail.com</a></p>
-          <p class="member-detail"><a href="mailto:ashledep@oregonstate.edu">ashledep@oregonstate.edu</a></p>
           <div class="links">
             <a href="https://github.com/DeptmerAshley" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/in/deptmer-ashley-jr/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -291,7 +504,6 @@
           <h3>Steven Cleasby-Mayeda</h3>
           <p class="role">B.S. Applied Computer Science &ndash; AI</p>
           <p class="member-detail"><a href="mailto:steven.cleasby.mayeda@gmail.com">steven.cleasby.mayeda@gmail.com</a></p>
-          <p class="member-detail"><a href="mailto:cleasbys@oregonstate.edu">cleasbys@oregonstate.edu</a></p>
           <div class="links">
             <a href="https://github.com/Ancerro" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/in/stevencm/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -305,7 +517,6 @@
           <h3>Joseph Taylor</h3>
           <p class="role">B.S. Applied Computer Science &ndash; Web Dev</p>
           <p class="member-detail"><a href="mailto:joey.t2099@gmail.com">joey.t2099@gmail.com</a></p>
-          <p class="member-detail"><a href="mailto:tayljose@oregonstate.edu">tayljose@oregonstate.edu</a></p>
           <div class="links">
             <a href="https://github.com/JoeyT2099" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/in/joseph-taylor-895aa5259/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
