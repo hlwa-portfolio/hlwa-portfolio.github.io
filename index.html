@@ -107,8 +107,9 @@
     }
 
     .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 16px;
       margin-top: 12px;
     }
@@ -117,6 +118,8 @@
       border: 1px solid #ccc;
       padding: 16px;
       text-align: center;
+      width: 210px;
+      box-sizing: border-box;
     }
 
     .avatar {
@@ -166,6 +169,7 @@
       font-size: 0.8rem;
       color: #444;
       margin: 2px 0;
+      word-break: break-all;
     }
 
     .member-detail a {
@@ -310,11 +314,7 @@
       <div class="two-col">
         <!-- left column -->
         <div>
-          <div class="img-placeholder" style="min-height:160px;">
-            <span class="ph-icon">🖼</span>
-            <strong>Simplified Vitrification Process Diagram</strong>
-            <span>Attach image here</span>
-          </div>
+          <img src="https://media.licdn.com/dms/image/v2/D5622AQGikSUuyadalw/feedshare-shrink_800/B56ZjOQcUxHAAo-/0/1755807074891?e=2147483647&v=beta&t=7VaXgZ_EE_iTeiBxj8Pdw9p36NqXkGfReTwXxhjEeC8" alt="Simplified Vitrification Process Diagram" style="width:100%;margin:10px 0;display:block;" />
 
           <div class="sub-section-heading">Background</div>
           <ul class="bullet-list">
@@ -323,11 +323,7 @@
             <li>In order to protect the Columbia River, Hanford is using vitrification to contain nuclear waste as glass to prevent further contamination.</li>
           </ul>
 
-          <div class="img-placeholder" style="min-height:140px;">
-            <span class="ph-icon">🖼</span>
-            <strong>HLW Application Home Interface</strong>
-            <span>Attach screenshot here</span>
-          </div>
+          <img src="https://media.discordapp.net/attachments/1306749896749092886/1497819077740199946/image.png?ex=69eee838&is=69ed96b8&hm=c48833927059fbd32980cafb16ddb0b244205e5e4344d2167d8149ee8a7732b4&=&format=webp&quality=lossless" alt="HLW Application Home Interface" style="width:100%;margin:10px 0;display:block;" />
         </div>
 
         <!-- right column -->
@@ -339,11 +335,7 @@
             <li>The site began vitrification of low activity waste on October 15th, 2025.</li>
           </ul>
 
-          <div class="img-placeholder" style="min-height:160px;">
-            <span class="ph-icon">🖼</span>
-            <strong>Hanford Site, WA. Circa 1960</strong>
-            <span>Attach image here</span>
-          </div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Hanford_N_Reactor_adjusted.jpg" alt="Hanford Site, WA. Circa 1960" style="width:100%;margin:10px 0;display:block;" />
 
           <div class="sub-section-heading">What We Solve</div>
           <ul class="bullet-list">
@@ -373,11 +365,7 @@
         <div class="step-body">
           <h3>Step 1: Waste Volume Transfer</h3>
           <p>Waste samples are used to calculate the required High-Level (HLW) transfer into Melter Feed Preparation Vessel.</p>
-          <div class="img-placeholder" style="min-height:120px;">
-            <span class="ph-icon">🖼</span>
-            <strong>Step 1 Screenshot</strong>
-            <span>Attach calculator screenshot here</span>
-          </div>
+          <img src="https://media.discordapp.net/attachments/1306749896749092886/1497819078138527954/image.png?ex=69eee838&is=69ed96b8&hm=06927e6886db23818f26d13451d20bac52e57d57d0dd1316c8848842f8e78151&=&format=webp&quality=lossless" alt="Step 1 Screenshot" style="width:100%;margin:8px 0;display:block;" />
         </div>
       </div>
 
@@ -390,11 +378,7 @@
         <div class="step-body">
           <h3>Step 2: GFC Calculation</h3>
           <p>After the waste is transferred, new samples are analyzed to calculate the required glass-forming chemical (GFC) masses needed.</p>
-          <div class="img-placeholder" style="min-height:120px;">
-            <span class="ph-icon">🖼</span>
-            <strong>Step 2 Screenshot</strong>
-            <span>Attach calculator screenshot here</span>
-          </div>
+          <img src="https://media.discordapp.net/attachments/1306749896749092886/1497819078683918496/image.png?ex=69eee838&is=69ed96b8&hm=3bde0ee14b49468082ba75f4ce71cee33b5b3205168d0def5f50054bbeb8097a&=&format=webp&quality=lossless" alt="Step 2 Screenshot" style="width:100%;margin:8px 0;display:block;" />
         </div>
       </div>
 
@@ -407,11 +391,7 @@
         <div class="step-body">
           <h3>Step 3: Glass Property Prediction</h3>
           <p>After the GFCs are added, the final mixture is sampled and analyzed to predict the glass properties.</p>
-          <div class="img-placeholder" style="min-height:120px;">
-            <span class="ph-icon">🖼</span>
-            <strong>Step 3 Screenshot</strong>
-            <span>Attach calculator screenshot here</span>
-          </div>
+          <img src="https://media.discordapp.net/attachments/1306749896749092886/1497819079137034310/image.png?ex=69eee838&is=69ed96b8&hm=0f0644b3f6881cf47ac442584f2db7271335c900ac24fe45cba08164b127714b&=&format=webp&quality=lossless" alt="Step 3 Screenshot" style="width:100%;margin:8px 0;display:block;" />
         </div>
       </div>
 
@@ -424,11 +404,7 @@
         <div class="step-body">
           <h3>Step 4: Constraint Validation</h3>
           <p>The predicted glass properties are validated against the requirements. If the formulation does not meet constraints, the workflow loops back to Step 2 to fix the mixture.</p>
-          <div class="img-placeholder" style="min-height:120px;">
-            <span class="ph-icon">🖼</span>
-            <strong>Step 4 Screenshot</strong>
-            <span>Attach calculator screenshot here</span>
-          </div>
+          <img src="https://media.discordapp.net/attachments/1306749896749092886/1497819079652802720/image.png?ex=69eee838&is=69ed96b8&hm=1ad1fae3a6068aa1abfb2d81535cf1bf66fa0bcd78abe6b7506d8f074d34610d&=&format=webp&quality=lossless" alt="Step 4 Screenshot" style="width:100%;margin:8px 0;display:block;" />
         </div>
       </div>
 
@@ -441,11 +417,7 @@
         <div class="step-body">
           <h3>Step 5: Record Generation</h3>
           <p>The production records are generated and saved.</p>
-          <div class="img-placeholder" style="min-height:120px;">
-            <span class="ph-icon">🖼</span>
-            <strong>Step 5 Screenshot</strong>
-            <span>Attach calculator screenshot here</span>
-          </div>
+          <img src="https://media.discordapp.net/attachments/1306749896749092886/1497819080030294099/image.png?ex=69eee838&is=69ed96b8&hm=5da490ad16ee4819da4434d6ed510fbe8bc0bd01f3e94de422ec22f264cef2d8&=&format=webp&quality=lossless" alt="Step 5 Screenshot" style="width:100%;margin:8px 0;display:block;" />
         </div>
       </div>
     </section>
@@ -455,27 +427,12 @@
       <div class="section-label">03 — Misc</div>
       <h2>Additional Information</h2>
 
-      <div class="card-grid">
-        <div class="card">
-          <h3>Technologies Used</h3>
-          <p>Details about the tech stack, frameworks, and tools used to build the application.</p>
-        </div>
-
-        <div class="card">
-          <h3>Development Timeline</h3>
-          <p>Key milestones and phases of the project from initial design through delivery.</p>
-        </div>
-
-        <div class="card">
-          <h3>Challenges &amp; Lessons Learned</h3>
-          <p>Notable obstacles encountered during development and what was learned from them.</p>
-        </div>
-
-        <div class="card">
-          <h3>Future Work</h3>
-          <p>Potential improvements, extensions, or next steps for the application.</p>
-        </div>
-      </div>
+      <ul class="bullet-list">
+        <li>Technologies Used</li>
+        <li>Development Timeline</li>
+        <li>Challenges &amp; Lessons Learned</li>
+        <li>Future Work</li>
+      </ul>
     </section>
 
     <!-- team -->
