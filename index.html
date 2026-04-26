@@ -232,6 +232,39 @@
       font-size: 1.6rem;
     }
 
+    /* image figures with captions */
+    .img-figure {
+      margin: 10px 0;
+    }
+
+    .img-figure figcaption {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: bold;
+      color: #444;
+      text-align: center;
+      padding: 6px 6px 4px;
+      border-top: 1px solid #ddd;
+      margin-top: 2px;
+      background: #f9f9f9;
+    }
+
+    /* Section 01: uniform image height */
+    #description .img-figure img {
+      height: 220px;
+      object-fit: cover;
+      width: 100%;
+      display: block;
+    }
+
+    /* Section 02: uniform image height */
+    #features .img-figure img {
+      height: 220px;
+      object-fit: cover;
+      width: 100%;
+      display: block;
+    }
+
     /* step rows for features section */
     .step-row {
       display: flex;
@@ -314,7 +347,10 @@
       <div class="two-col">
         <!-- left column -->
         <div>
-          <img src="https://media.licdn.com/dms/image/v2/D5622AQGikSUuyadalw/feedshare-shrink_800/B56ZjOQcUxHAAo-/0/1755807074891?e=2147483647&v=beta&t=7VaXgZ_EE_iTeiBxj8Pdw9p36NqXkGfReTwXxhjEeC8" alt="Simplified Vitrification Process Diagram" style="width:100%;margin:10px 0;display:block;" />
+          <figure class="img-figure">
+            <img src="https://media.licdn.com/dms/image/v2/D5622AQGikSUuyadalw/feedshare-shrink_800/B56ZjOQcUxHAAo-/0/1755807074891?e=2147483647&v=beta&t=7VaXgZ_EE_iTeiBxj8Pdw9p36NqXkGfReTwXxhjEeC8" alt="Simplified Vitrification Process Diagram" />
+            <figcaption>Simplified Vitrification Process Diagram</figcaption>
+          </figure>
 
           <div class="sub-section-heading">Background</div>
           <ul class="bullet-list">
@@ -323,7 +359,10 @@
             <li>In order to protect the Columbia River, Hanford is using vitrification to contain nuclear waste as glass to prevent further contamination.</li>
           </ul>
 
-          <img src="https://media.discordapp.net/attachments/1306749896749092886/1497819077740199946/image.png?ex=69eee838&is=69ed96b8&hm=c48833927059fbd32980cafb16ddb0b244205e5e4344d2167d8149ee8a7732b4&=&format=webp&quality=lossless" alt="HLW Application Home Interface" style="width:100%;margin:10px 0;display:block;" />
+          <figure class="img-figure">
+            <img src="https://media.discordapp.net/attachments/1306749896749092886/1497819077740199946/image.png?ex=69eee838&is=69ed96b8&hm=c48833927059fbd32980cafb16ddb0b244205e5e4344d2167d8149ee8a7732b4&=&format=webp&quality=lossless" alt="HLW Application Home Interface" />
+            <figcaption>HLW Application Home Interface</figcaption>
+          </figure>
         </div>
 
         <!-- right column -->
@@ -335,7 +374,10 @@
             <li>The site began vitrification of low activity waste on October 15th, 2025.</li>
           </ul>
 
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Hanford_N_Reactor_adjusted.jpg" alt="Hanford Site, WA. Circa 1960" style="width:100%;margin:10px 0;display:block;" />
+          <figure class="img-figure">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Hanford_N_Reactor_adjusted.jpg" alt="Hanford Site, WA. Circa 1960" />
+            <figcaption>Hanford Site, WA. Circa 1960</figcaption>
+          </figure>
 
           <div class="sub-section-heading">What We Solve</div>
           <ul class="bullet-list">
@@ -365,7 +407,10 @@
         <div class="step-body">
           <h3>Step 1: Waste Volume Transfer</h3>
           <p>Waste samples are used to calculate the required High-Level (HLW) transfer into Melter Feed Preparation Vessel.</p>
-          <img src="https://media.discordapp.net/attachments/1306749896749092886/1497819078138527954/image.png?ex=69eee838&is=69ed96b8&hm=06927e6886db23818f26d13451d20bac52e57d57d0dd1316c8848842f8e78151&=&format=webp&quality=lossless" alt="Step 1 Screenshot" style="width:100%;margin:8px 0;display:block;" />
+          <figure class="img-figure">
+            <img src="https://media.discordapp.net/attachments/1306749896749092886/1497819078138527954/image.png?ex=69eee838&is=69ed96b8&hm=06927e6886db23818f26d13451d20bac52e57d57d0dd1316c8848842f8e78151&=&format=webp&quality=lossless" alt="Step 1 Screenshot" />
+            <figcaption>Step 1 Screenshot</figcaption>
+          </figure>
         </div>
       </div>
 
@@ -378,7 +423,10 @@
         <div class="step-body">
           <h3>Step 2: GFC Calculation</h3>
           <p>After the waste is transferred, new samples are analyzed to calculate the required glass-forming chemical (GFC) masses needed.</p>
-          <img src="https://media.discordapp.net/attachments/1306749896749092886/1497819078683918496/image.png?ex=69eee838&is=69ed96b8&hm=3bde0ee14b49468082ba75f4ce71cee33b5b3205168d0def5f50054bbeb8097a&=&format=webp&quality=lossless" alt="Step 2 Screenshot" style="width:100%;margin:8px 0;display:block;" />
+          <figure class="img-figure">
+            <img src="https://media.discordapp.net/attachments/1306749896749092886/1497819078683918496/image.png?ex=69eee838&is=69ed96b8&hm=3bde0ee14b49468082ba75f4ce71cee33b5b3205168d0def5f50054bbeb8097a&=&format=webp&quality=lossless" alt="Step 2 Screenshot" />
+            <figcaption>Step 2 Screenshot</figcaption>
+          </figure>
         </div>
       </div>
 
@@ -391,7 +439,10 @@
         <div class="step-body">
           <h3>Step 3: Glass Property Prediction</h3>
           <p>After the GFCs are added, the final mixture is sampled and analyzed to predict the glass properties.</p>
-          <img src="https://media.discordapp.net/attachments/1306749896749092886/1497819079137034310/image.png?ex=69eee838&is=69ed96b8&hm=0f0644b3f6881cf47ac442584f2db7271335c900ac24fe45cba08164b127714b&=&format=webp&quality=lossless" alt="Step 3 Screenshot" style="width:100%;margin:8px 0;display:block;" />
+          <figure class="img-figure">
+            <img src="https://media.discordapp.net/attachments/1306749896749092886/1497819079137034310/image.png?ex=69eee838&is=69ed96b8&hm=0f0644b3f6881cf47ac442584f2db7271335c900ac24fe45cba08164b127714b&=&format=webp&quality=lossless" alt="Step 3 Screenshot" />
+            <figcaption>Step 3 Screenshot</figcaption>
+          </figure>
         </div>
       </div>
 
@@ -404,7 +455,10 @@
         <div class="step-body">
           <h3>Step 4: Constraint Validation</h3>
           <p>The predicted glass properties are validated against the requirements. If the formulation does not meet constraints, the workflow loops back to Step 2 to fix the mixture.</p>
-          <img src="https://media.discordapp.net/attachments/1306749896749092886/1497819079652802720/image.png?ex=69eee838&is=69ed96b8&hm=1ad1fae3a6068aa1abfb2d81535cf1bf66fa0bcd78abe6b7506d8f074d34610d&=&format=webp&quality=lossless" alt="Step 4 Screenshot" style="width:100%;margin:8px 0;display:block;" />
+          <figure class="img-figure">
+            <img src="https://media.discordapp.net/attachments/1306749896749092886/1497819079652802720/image.png?ex=69eee838&is=69ed96b8&hm=1ad1fae3a6068aa1abfb2d81535cf1bf66fa0bcd78abe6b7506d8f074d34610d&=&format=webp&quality=lossless" alt="Step 4 Screenshot" />
+            <figcaption>Step 4 Screenshot</figcaption>
+          </figure>
         </div>
       </div>
 
@@ -417,7 +471,10 @@
         <div class="step-body">
           <h3>Step 5: Record Generation</h3>
           <p>The production records are generated and saved.</p>
-          <img src="https://media.discordapp.net/attachments/1306749896749092886/1497819080030294099/image.png?ex=69eee838&is=69ed96b8&hm=5da490ad16ee4819da4434d6ed510fbe8bc0bd01f3e94de422ec22f264cef2d8&=&format=webp&quality=lossless" alt="Step 5 Screenshot" style="width:100%;margin:8px 0;display:block;" />
+          <figure class="img-figure">
+            <img src="https://media.discordapp.net/attachments/1306749896749092886/1497819080030294099/image.png?ex=69eee838&is=69ed96b8&hm=5da490ad16ee4819da4434d6ed510fbe8bc0bd01f3e94de422ec22f264cef2d8&=&format=webp&quality=lossless" alt="Step 5 Screenshot" />
+            <figcaption>Step 5 Screenshot</figcaption>
+          </figure>
         </div>
       </div>
     </section>
